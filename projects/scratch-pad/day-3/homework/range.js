@@ -24,16 +24,30 @@
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     var final = [];
+    // initializes an empty array variable called final
     if (start <= end) {
+    // if chain that checks if start parameter is less than or equal to the 
+    // end parameter
        for (var i = start; i <= end; i++) {
+       // if true, starts a for loop
+       // start: value of start paramater
+       // stop: 1 greater than the value of the end parameter
             final.push(i);
-        }
-        return(final);     
-    } else {
-        for (var i = end; i <= start; i++){
-            final.unshift(i);
+            // pushes the value of i onto the end of the final array each loop
         }
         return(final);
+        // returns the final variable to parent scope
+    } else {
+    // executes if first if check is false
+        for (var i = end; i <= start; i++){
+        // start: value of end parameter
+        // stop: 1 greater than value of start parameter
+            final.unshift(i);
+            // unshifts the value of i onto the beginning of the final array 
+            // each loop
+        }
+        return(final);
+        // returns the final variable to parent scope
     }
     // YOUR CODE GOES ABOVE HERE //
 }

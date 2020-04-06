@@ -15,8 +15,7 @@
 function length(string) {
     // YOUR CODE BELOW HERE //
     return(string.length);
-
-
+    // returns the lenght of the string parameter
     // YOUR CODE ABOVE HERE //
 }
 
@@ -25,9 +24,8 @@ function length(string) {
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-
     return(string.toLowerCase());
-
+    // returns the string parameter with all characters set to lowercase
     // YOUR CODE ABOVE HERE //
 }
 
@@ -36,9 +34,8 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
     return(string.toUpperCase());
-
+    // returns the string parameter with all characters set to uppercase
     // YOUR CODE ABOVE HERE //
 }
 
@@ -57,10 +54,14 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-    var re = / /gi;
-    string = string.replace(re, '-');
+    string = string.replace(/ /gi, '-');
+    // executes the replace method on the string parameter
+    // backslashes are delimiters that tell where the regex begins and ends
+    // in this case, we are searching for a space character
+    // g indicates that we are searching globally, that is, searching the entire string
+    // i inddicates that our search is case-insensitive
     return(string.toLowerCase());
-
+    // returns the string parameter with all characters set to lowercase
     // YOUR CODE ABOVE HERE //
 }
 
@@ -79,13 +80,18 @@ function toDashCase(string) {
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
     var firstLetter = string[0].toLowerCase();
+    // initializes a new variable that contains the first character in the string
+    // parameter set to lower-case
     var secondLetter = char.toLowerCase();
+    // initializes a new variable that contains the character parameter set to lower-case
     if (firstLetter == secondLetter) {
+    // begins if chain that tests if firstLetter is loosely equal to secondLetter
         return(true);
+        // returns true if true
     } else {
         return(false);
+        // returns false otherwise
     }
-
     // YOUR CODE ABOVE HERE //
 }
 
@@ -104,11 +110,17 @@ function beginsWith(string, char) {
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
     var firstLetter = string[string.length - 1].toLowerCase();
+    // initializes a new variable that contains the last character in the string
+    // parameter set to lower-case
     var secondLetter = char.toLowerCase();
+    // initializes a new variable that contains the character parameter set to lower-case
     if (firstLetter == secondLetter) {
+    // begins if chain that tests if firstLetter is loosely equal to secondLetter
         return(true);
+        // returns true if true
     } else {
         return(false);
+        // returns false otherwise
     }
     // YOUR CODE ABOVE HERE //
 }
@@ -121,8 +133,7 @@ function endsWith(string, char) {
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     return stringOne.concat(stringTwo);
-
-
+    // returns the value of stringOne with stringTwo concatenated onto it
     // YOUR CODE ABOVE HERE //
 }
 
@@ -139,8 +150,12 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
+    // arguments creates an object containing all arguments passed to the function
+    // array.from creates an array from the arguments passed to the function
+    // this array is composed of one element for each character 
     return(args.join(''));
-
+    // returns the args array as a single string, with each element of the original 
+    // array not seperated by anything
     // YOUR CODE ABOVE HERE //
 }
 
@@ -156,9 +171,13 @@ function join(stringOne, stringTwo) {
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     if (stringOne.length > stringTwo.length) {
+    // if statement that tests if the length of stringOne is longer than the 
+    // length of stringTwo
         return(stringOne);
+        // returns stringOne is true
     } else {
         return(stringTwo);
+        // returns stringTwo otherwise
     }
     // YOUR CODE ABOVE HERE //
 }
@@ -173,6 +192,10 @@ function longest(stringOne, stringTwo) {
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     return(stringTwo.localeCompare(stringOne));
+    // the localeCompare method returns a -1 if the reference string (stringTwo)
+    // is before the compared string (stringOne), a 0 is they're equal, and a 1
+    // if the compared string (stringOne) is before the reference string 
+    // (stringTwo)
     // YOUR CODE ABOVE HERE //
 }
 
@@ -187,6 +210,10 @@ function sortAscending(stringOne, stringTwo) {
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     return(stringOne.localeCompare(stringTwo));
+    // the localeCompare method returns a -1 if the reference string (stringOne)
+    // is before the compared string (stringTwo), a 0 is they're equal, and a 1
+    // if the compared string (stringTwo) is before the reference string 
+    // (stringOne)
     // YOUR CODE ABOVE HERE //
 }
 

@@ -22,10 +22,16 @@
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
       var test = '';
+      // initializes a variable called test that is an empty string
         for (var i= (input.length-1); i >= 0 ; i--) {
+        // start: last index in the length parameter
+        // end: -1
           test += input[i];
+          // sets the value of test equal to the current value of test, plus the
+          // character of input found at the i index
         }
         return(test);
+        // returns the test variable
         // YOUR CODE GOES ABOVE HERE //
 }
 

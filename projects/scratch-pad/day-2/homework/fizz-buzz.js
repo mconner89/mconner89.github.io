@@ -12,21 +12,24 @@
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
+    for (var i = 1; i <= 100; i++) {    
     // Start: 1
     // End: 100
-    for (var i = 1; i <= 100; i++) {
-        // If chain that first assesses if a number is a multiple of both three and 5
         if (i % 5 === 0 && i % 3 === 0) {
+        // If chain that first assesses if a number is a multiple of both three and 5
             console.log('FizzBuzz');
-        // Next checks if divisible by 3 and prints "Fizz" instead if true
-        } else if (i % 3 === 0) {
+            // if true, prints => FizzBuzz
+        } else if (i % 3 === 0) {            
+        // If false, checks if divisible by 3 
             console.log('Fizz');
-        // Next checks if divisible by 5 and prints "Buzz" instead if true
-        } else if (i % 5 === 0) {
+            // if true, prints => Fizz
+        } else if (i % 5 === 0) {            
+        // If false, checks if divisible by 5
             console.log('Buzz');
-        // Finally, prints the number if it is not divisible by 3 or 5
-        } else {
+            // if true, prints => Buzz
+        } else {            
             console.log(i);
+            // if no checks pass, prints => i
         }
     }
     // YOUR CODE GOES ABOVE HERE //

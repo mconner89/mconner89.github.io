@@ -15,6 +15,7 @@
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     return(Array.isArray(value));
+    // Array.isArray will return true if the value parameter is an array
     // YOUR CODE ABOVE HERE //
 }
 
@@ -29,6 +30,7 @@ function isArray(value) {
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     return(Object.prototype.toString.call(value) === '[object Object]');
+    // returns true if value is an object
         // YOUR CODE ABOVE HERE //
 }
 
@@ -40,11 +42,8 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    if ((Array.isArray(value) == true) || (Object.prototype.toString.call(value) ==='[object Object]')) {
-        return(true);
-    } else {
-        return(false);
-    }
+    return ((Array.isArray(value) == true) || (Object.prototype.toString.call(value) ==='[object Object]'));
+    // returns true if value is an object or array, false if anything else
     // YOUR CODE ABOVE HERE //
 }
 
@@ -70,18 +69,25 @@ function isCollection(value) {
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
     if (Object.prototype.toString.call(value) ==='[object Object]') {
+    // checks if value is an object
         return('object');
+        // returns object if true
     } else if (Array.isArray(value) == true) {
+    // checks if value is an array
         return('array');
+        // returns array if true
     } else if (value === null) {
+    // checks if value is null
         return('null');
+        // returns null if true
     } else if (Object.prototype.toString.call(value) === '[object Date]') {
+    // checks if value is a date
         return('date');
+        // returns date if true
     } else {
         return(typeof value);
+        // returns the data type of value
     }
-    
-    
     // YOUR CODE ABOVE HERE //
 }
 

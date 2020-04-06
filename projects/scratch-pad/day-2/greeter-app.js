@@ -36,13 +36,21 @@
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
     if (hour <= 11) {
+    // if chain that first tests that hour is less than 12
         console.log('Good Morning!');
+        // if true, prints => Good Morning!
     } else if (hour <= 16) {
+    // if not true, tests that hour is less than 17
         console.log('Good Afternoon!');
+        // if true, prints => Good Afternoon!
     } else if (hour <= 21) {
+    // if not true, tests that hour is less than 22
         console.log('Good Evening!');
+        // if true, prints => Good Evening!
     } else if (hour <= 24) {
+    // if not true, tests that hour is less than 25
         console.log('Good Night!');
+        // if true, prints => Good Night!
     }
         // YOUR CODE ABOVE HERE //
 }

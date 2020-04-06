@@ -13,7 +13,10 @@
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
   for (var i = 0; i < array.length; i++) {
+  // start: 0
+  // end: length of array parameter
     console.log(array[i]);
+    // prints the element found at the i index position in the array parameter
   }
       // YOUR CODE ABOVE HERE //
 }
@@ -25,7 +28,10 @@ function printArrayValues(array) {
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
   for (var i = array.length - 1; i >= 0; i--) {
+  // start: length of array parameter - 1
+  // stop: -1
     console.log(array[i]);
+    // prints the element found at the i index position in the array parameter
   }
   // YOUR CODE ABOVE HERE //
 }
@@ -36,10 +42,16 @@ function printArrayValuesInReverse(array) {
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
   var keyList = [];
+  // initialize empty array variable called keyList 
   for (var key in object) {
+  // for in loop that stores property names in key variable as it loops through
+  // the object parameter
     keyList.push(key);
+    // pushes the property name stored in the key value to the keyList array
+    // each time it loops over a property
   }
   return(keyList);
+  // returns the keyList variable to global scope
       // YOUR CODE ABOVE HERE //
 }
 
@@ -50,7 +62,11 @@ function getObjectKeys(object) {
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
     for (var key in object) {
+    // for in loop that stores property names in the key variable as it loops
+    // through the object parameter
     console.log(key);
+    // prints the property name stored in the key variable each time it loops
+    // over a property
   }
   // YOUR CODE ABOVE HERE //
 }
@@ -61,8 +77,14 @@ function printObjectKeys(object) {
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
   var valueList = [];
+  // initializes an empty array variable called valueList
   for (var key in object) {
+  // for in loop that stores property names in the key variable as it loops
+  // through the object parameter
     valueList.push(object[key]);
+    // pushes the value associated with the property name stored in the key
+    // variable of the object parameter into the valueList array each time it
+    // loops over a property
   }
   return(valueList);
     // YOUR CODE ABOVE HERE //
@@ -75,7 +97,11 @@ function getObjectValues(object) {
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
   for (var key in object) {
+  // for in loop that stores property names in the key variable as it loops
+  // through the object parameter
     console.log(object[key]);
+    // prints the value associated with the property name stored in the key
+    // variable of the object parameter each time it loops over a property
   }
   // YOUR CODE ABOVE HERE //
 }
@@ -86,10 +112,17 @@ function printObjectValues(object) {
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
   var pairs = [];
+  // initializes an empty array variable called pairs
   for (var key in object) {
+  // for in loop that stores property names in the key variable as it loops
+  // through the object parameter
     pairs.push(key);
+    // pushes the property names of each property into the pairs array each time
+    // it loops over a property
   }
   return pairs.length;
+  // returns the length of the pairs array, which contains the name of every
+  // property in the object parameter
     // YOUR CODE ABOVE HERE //
 }
 
@@ -100,11 +133,21 @@ function getObjectLength(object) {
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
   var valueList = [];
+  // initializes an empty array variable called valueList
   for (var key in object) {
+  // for in loop that stores property names in the key variable as it loops
+  // through the object parameter
     valueList.push(object[key]);
+    // pushes the value associated with the property name stored in the key
+    // variable of the object parameter into the valueList array each time it
+    // loops over a property
   }
   for (var i = valueList.length - 1; i >= 0; i--) {
+  // start: length of valueList array - 1 
+  // end: -1
     console.log(valueList[i]);
+    // prints the element of valueList found at the i index position every time
+    // a loop is completed
   }
     // YOUR CODE ABOVE HERE //
 }

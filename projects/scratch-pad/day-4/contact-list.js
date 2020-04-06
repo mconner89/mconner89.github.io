@@ -87,10 +87,6 @@ function makeContactList() {
     }
   };
 }
-
-
-
-
 // YOUR CODE GOES ABOVE HERE //
 
 
