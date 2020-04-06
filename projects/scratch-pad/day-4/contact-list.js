@@ -49,7 +49,7 @@ function makeContact(id, nameFirst, nameLast) {
     return(contact);
 } 
 
-//  Create a factory function called makeContact
+//  Create a factory function called makeContactList
 function makeContactList() {
   //  create contacts object
   let contacts = [];
@@ -84,6 +84,24 @@ function makeContactList() {
                 return contacts.splice(i, 1);
             }
         }
+    },
+    // adds a printAllContactNames object
+    printAllContactNames: function() {
+        // new variable to hold string
+        var allContacts = '';
+        // loop through each item in the contacts array
+        for(var i = 0; i < contacts.length; i++) {
+            // pulls value of first name key, adds space, pulls value of last name key
+            var newName = contacts[i]['nameFirst'] + ' ' + contacts[i]['nameLast'];
+            // add line break to each string except for last entry
+            if (i < contacts.length - 1) {
+                newName += '\n';
+            }
+            // adds each contact name onto the allContacts string variable
+            allContacts += newName;
+        }
+        // returns string
+        return allContacts;
     }
   };
 }
