@@ -5,9 +5,13 @@ function repeat(n, action) {
 }
 
 function characterScript(code) {
+  // for of loop that loops through SCRIPTS array
   for (let script of SCRIPTS) {
+    // using script input, looks at a specific range and checks if code falls 
+    // in between a specific range
     if (script.ranges.some(([from, to]) => {
-        return code >= from && code < to;
+      // if so, return entire range
+      return code >= from && code < to;
       })) {
       return script;
     }
@@ -15,9 +19,12 @@ function characterScript(code) {
   return null;
 }
 
+// outputs array of objects that counts how many times a specific name exists
 function countBy(items, groupName) {
-  let counts = [];
+  let counts = []; // [{name: "name", count: 2}, {name: name2, count: 1}]
+  // loops each element "item" of items array
   for (let item of items) {
+    // return a specific name back to countBy function so it can be added to array
     let name = groupName(item);
     let known = counts.findIndex(c => c.name == name);
     if (known == -1) {
@@ -34,6 +41,7 @@ function countBy(items, groupName) {
 
 function textScripts(text) {
   let scripts = countBy(text, char => {
+    // invoke characterScript function, passing in char and using the codePointAt function
     let script = characterScript(char.codePointAt(0));
     return script ? script.name : "none";
   }).filter(({
