@@ -2,8 +2,11 @@
 // min /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+// min function that takes two parameters: a and b
 function min(a, b) {
+  // test if a is less than b and returns a if true
   if (a < b) return a;
+  // returns b if false
   else return b;
 }
 
@@ -11,10 +14,15 @@ function min(a, b) {
 // isEven //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+// isEven function that takes one parameters: n
 function isEven(n) {
+  // test if n is equal to zero and return true if true
   if (n == 0) return true;
+  // test if n is equal to 1 and return false if true
   else if (n == 1) return false;
+  // test if n is less than 0 and re-runs isEven with n set to negative
   else if (n < 0) return isEven(-n);
+  // else returns isEven ran with n-2
   else return isEven(n - 2);
 }
 
@@ -22,13 +30,22 @@ function isEven(n) {
 // countChars //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+// countChars function that takes two parameters: string, ch
 function countChars(string, ch) {
+  // initializes counted to 0
   let counted = 0;
+  // for loop that loops through string
+  // start: 0
+  // end: last character of string
+  // increment by 1
   for (let i = 0; i < string.length; i++) {
+    // checks if ith character of string equals ch input
     if (string[i] == ch) {
+      // if true, increment counted by 1
       counted += 1;
     }
   }
+  // return counted
   return counted;
 }
 
@@ -36,7 +53,10 @@ function countChars(string, ch) {
 // countBs /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+// countBs function that takes one parameters: string
+
 function countBs(string) {
+  // returns countChars function with string input and "B" entered as parameters
   return countChars(string, "B");
 }
 
